@@ -1,0 +1,21 @@
+/node_modules/
+
+# Compiler output
+/lib/
+/elements/
+/index.d.ts
+/index.d.ts.map
+/index.js
+/index.js.map
+/test/
+/coverage/
+# Compiler output reserved
+/helper/
+/store/
+/service/
+/routers/
+
+.DS_Store
+logs
+*.log
+npm-debug.log*

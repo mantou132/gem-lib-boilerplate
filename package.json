@@ -1,0 +1,79 @@
+{
+  "name": "gem-lib-boilerplate",
+  "version": "0.0.1",
+  "description": "gem lib boilerplate",
+  "main": "index.js",
+  "module": "index.js",
+  "files": [
+    "/index.js",
+    "/index.js.map",
+    "/index.d.ts",
+    "/index.d.ts.map",
+    "/elements/",
+    "/lib/",
+    "/src/",
+    "/helper/",
+    "/store/",
+    "/service/",
+    "/routers/"
+  ],
+  "typings": "index.d.ts",
+  "scripts": {
+    "lint": "tsc --noEmit && eslint --ext .ts --fix src/",
+    "watch": "tsc --watch",
+    "build": "rm -rf `ls src` && tsc",
+    "prepare": "npm run lint && npm run build && karma start",
+    "example": "webpack-dev-server",
+    "test": "npm run build && karma start --coverage",
+    "test:bs": "npm run build &&  karma start karma.bs.config.js --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mantou132/gem-lib-boilerplate.git"
+  },
+  "keywords": [
+    "web",
+    "webcomponents"
+  ],
+  "author": "mantou132",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mantou132/gem-lib-boilerplate/issues"
+  },
+  "homepage": "https://github.com/mantou132/gem-lib-boilerplate#readme",
+  "dependencies": {
+    "@mantou/gem": "^0.1.12"
+  },
+  "devDependencies": {
+    "@open-wc/semantic-dom-diff": "^0.13.0",
+    "@open-wc/testing": "^0.11.1",
+    "@open-wc/testing-karma": "^2.0.0",
+    "@open-wc/testing-karma-bs": "^1.0.0",
+    "@typescript-eslint/eslint-plugin": "^1.11.0",
+    "@typescript-eslint/parser": "^1.11.0",
+    "eslint": "^6.0.1",
+    "eslint-config-prettier": "^6.0.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "html-webpack-plugin": "^4.0.0-beta.5",
+    "husky": "^2.7.0",
+    "lint-staged": "^8.2.1",
+    "prettier": "^1.18.2",
+    "ts-loader": "^6.0.4",
+    "typescript": "^3.5.2",
+    "webpack": "^4.35.0",
+    "webpack-cli": "^3.3.5",
+    "webpack-dev-server": "^3.7.2",
+    "webpack-merge": "^4.1.5"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.ts": [
+      "eslint --fix",
+      "git add"
+    ]
+  }
+}
