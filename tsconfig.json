@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "outDir": "./",
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "noImplicitAny": false,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "target": "es6",
+    "lib": ["es2018", "dom"]
+  },
+  "include": ["src/**/*.ts"],
+  "exclude": ["src/examples/"]
+}
