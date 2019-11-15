@@ -9,6 +9,9 @@
 /index.js.map
 /test/
 /coverage/
+# example compiler output
+/examples/
+/build/
 # Compiler output reserved
 /helper/
 /store/

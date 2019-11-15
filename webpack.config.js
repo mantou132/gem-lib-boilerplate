@@ -5,6 +5,9 @@ const hello = 'hello';
 const example = process.env.NAME;
 const tip = '使用 `NAME=[example-name] npm run example` 指定用例';
 
+/**
+ * @type {import('webpack/declarations/WebpackOptions').WebpackOptions}
+ */
 module.exports = {
   entry: `./src/examples/${example || hello}/index.ts`,
   module: {
@@ -20,9 +23,9 @@ module.exports = {
     extensions: ['.tsx', '.ts', '.js'],
   },
   output: {
-    publicPath: '/',
+    publicPath: './',
     filename: 'bundle.[contenthash].js',
-    path: path.resolve(__dirname, 'temp'),
+    path: path.resolve(__dirname, 'build', example),
   },
   plugins: [
     new HtmlWebpackPlugin(),
@@ -36,7 +39,7 @@ module.exports = {
     },
   ],
   devServer: {
-    contentBase: './temp',
+    contentBase: path.join('./build', example),
     open: true,
     historyApiFallback: true,
   },
