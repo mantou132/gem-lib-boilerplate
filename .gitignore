@@ -9,6 +9,8 @@
 # example compiler output
 /examples/
 /dist/
+# rust compiler output
+/target/
 # Compiler output reserved
 /helper/
 /store/

@@ -1,6 +1,7 @@
 const path = require('path');
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const WasmPackPlugin = require('@wasm-tool/wasm-pack-plugin');
 
 const hello = 'hello';
 const example = process.env.NAME || hello;
@@ -22,13 +23,21 @@ module.exports = {
   },
   resolve: {
     extensions: ['.tsx', '.ts', '.js'],
+    fallback: { util: false },
   },
   output: {
     path: path.resolve(__dirname, 'build', example),
     publicPath: '/',
     filename: 'bundle.[contenthash].js',
   },
+  experiments: {
+    syncWebAssembly: true,
+  },
   plugins: [
+    new WasmPackPlugin({
+      crateDirectory: path.resolve(__dirname, 'src/crate'),
+      outDir: path.resolve(__dirname, 'src/crate/pkg'),
+    }),
     new HtmlWebpackPlugin(),
     {
       apply(compiler) {

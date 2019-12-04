@@ -2,6 +2,8 @@ import { html, GemElement, customElement } from '@mantou/gem';
 
 import './elements/switch';
 
+import('./crate/pkg');
+
 @customElement('lib-root')
 export class Lib extends GemElement {
   render() {
