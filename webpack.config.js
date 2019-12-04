@@ -2,14 +2,14 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const hello = 'hello';
-const example = process.env.NAME;
+const example = process.env.NAME || hello;
 const tip = '使用 `NAME=[example-name] npm run example` 指定用例';
 
 /**
  * @type {import('webpack/declarations/WebpackOptions').WebpackOptions}
  */
 module.exports = {
-  entry: `./src/examples/${example || hello}/index.ts`,
+  entry: `./src/examples/${example}/index.ts`,
   module: {
     rules: [
       {
@@ -23,7 +23,7 @@ module.exports = {
     extensions: ['.tsx', '.ts', '.js'],
   },
   output: {
-    publicPath: './',
+    publicPath: '',
     filename: 'bundle.[contenthash].js',
     path: path.resolve(__dirname, 'build', example),
   },
