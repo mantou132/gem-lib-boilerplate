@@ -2,6 +2,8 @@ import { html, GemElement } from '@mantou/gem';
 
 import './elements/switch';
 
+import('./crate/pkg');
+
 class Lib extends GemElement {
   render() {
     return html`

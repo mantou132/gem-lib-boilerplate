@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const WasmPackPlugin = require('@wasm-tool/wasm-pack-plugin');
 
 const hello = 'hello';
 const example = process.env.NAME || hello;
@@ -28,6 +29,10 @@ module.exports = {
     path: path.resolve(__dirname, 'build', example),
   },
   plugins: [
+    new WasmPackPlugin({
+      crateDirectory: path.resolve(__dirname, 'src/crate'),
+      outDir: path.resolve(__dirname, 'src/crate/pkg'),
+    }),
     new HtmlWebpackPlugin(),
     {
       apply(compiler) {
