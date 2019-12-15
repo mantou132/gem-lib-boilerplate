@@ -11,7 +11,7 @@
 /coverage/
 # example compiler output
 /examples/
-/build/
+/dist/
 # Compiler output reserved
 /helper/
 /store/

@@ -3,13 +3,19 @@
     "outDir": "./",
     "declaration": true,
     "declarationMap": true,
+    "alwaysStrict": true,
+    "noImplicitThis": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
     "sourceMap": true,
-    "noImplicitAny": false,
     "module": "esnext",
     "moduleResolution": "node",
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "experimentalDecorators": true,
     "target": "es6",
-    "lib": ["es2018", "dom"]
+    "lib": ["es2020", "dom"]
   },
-  "include": ["src/**/*.ts"],
-  "exclude": ["src/examples/"]
+  "include": ["src"],
+  "exclude": []
 }

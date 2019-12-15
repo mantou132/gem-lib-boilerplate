@@ -32,7 +32,7 @@ module.exports = {
     {
       apply(compiler) {
         compiler.hooks.done.tapAsync('MyCustomPlugin', function(_compiler, callback) {
-          if (!example) setTimeout(() => console.log(`\n${tip}`));
+          if (!process.env.NAME) setTimeout(() => console.log(`\n${tip}`));
           callback();
         });
       },
