@@ -42,7 +42,7 @@
   },
   "homepage": "https://github.com/mantou132/gem-lib-boilerplate#readme",
   "dependencies": {
-    "@mantou/gem": "^0.2.14"
+    "@mantou/gem": "^0.2.20"
   },
   "devDependencies": {
     "@open-wc/testing": "^2.4.2",
