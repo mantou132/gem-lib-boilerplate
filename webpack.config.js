@@ -23,7 +23,7 @@ module.exports = {
     extensions: ['.tsx', '.ts', '.js'],
   },
   output: {
-    publicPath: '',
+    publicPath: '/',
     filename: 'bundle.[contenthash].js',
     path: path.resolve(__dirname, 'build', example),
   },
