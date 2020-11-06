@@ -6,9 +6,7 @@ import Switch from '../elements/switch';
 
 describe('switch', () => {
   it('content', async () => {
-    const el: Switch = await fixture(html`
-      <lib-switch></lib-switch>
-    `);
+    const el: Switch = await fixture(html` <lib-switch></lib-switch> `);
     await nextFrame();
     expect(el.content).to.equal('content');
   });

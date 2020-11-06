@@ -5,9 +5,7 @@ export default class Switch extends GemElement {
     return 'content';
   }
   render() {
-    return html`
-      lib-switch
-    `;
+    return html`lib-switch`;
   }
 }
 
