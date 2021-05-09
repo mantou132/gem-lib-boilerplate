@@ -1,6 +1,7 @@
-import { html, GemElement } from '@mantou/gem';
+import { html, GemElement, customElement } from '@mantou/gem';
 
-export default class Switch extends GemElement {
+@customElement('lib-switch')
+export class Switch extends GemElement {
   get content() {
     return 'content';
   }
@@ -8,5 +9,3 @@ export default class Switch extends GemElement {
     return html`lib-switch`;
   }
 }
-
-customElements.define('lib-switch', Switch);

@@ -1,8 +1,9 @@
-import { html, GemElement } from '@mantou/gem';
+import { html, GemElement, customElement } from '@mantou/gem';
 
 import './elements/switch';
 
-class Lib extends GemElement {
+@customElement('lib-root')
+export class Lib extends GemElement {
   render() {
     return html`
       <style>
@@ -14,5 +15,3 @@ class Lib extends GemElement {
     `;
   }
 }
-
-customElements.define('lib-root', Lib);
