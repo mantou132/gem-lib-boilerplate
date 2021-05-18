@@ -3,8 +3,8 @@
 ```bash
 # install dependencies
 npm i
-# development
+# test
 npm run test
-# build project
+# development
 NAME=hello npm run example
 ```
