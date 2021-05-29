@@ -2,9 +2,9 @@
 
 ```bash
 # install dependencies
-npm i
+yarn
 # test
-npm run test
+yarn run test
 # development
-NAME=hello npm run example
+NAME=hello yarn run example
 ```

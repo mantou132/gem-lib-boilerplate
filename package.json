@@ -5,11 +5,8 @@
   "main": "dist/index.js",
   "module": "index.js",
   "files": [
+    "/index.*",
     "/dist/",
-    "/index.js",
-    "/index.js.map",
-    "/index.d.ts",
-    "/index.d.ts.map",
     "/elements/",
     "/lib/",
     "/src/",
