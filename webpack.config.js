@@ -1,4 +1,5 @@
 const path = require('path');
+
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const hello = 'hello';
@@ -23,9 +24,9 @@ module.exports = {
     extensions: ['.tsx', '.ts', '.js'],
   },
   output: {
+    path: path.resolve(__dirname, 'build', example),
     publicPath: '/',
     filename: 'bundle.[contenthash].js',
-    path: path.resolve(__dirname, 'build', example),
   },
   plugins: [
     new HtmlWebpackPlugin(),
@@ -39,7 +40,9 @@ module.exports = {
     },
   ],
   devServer: {
-    contentBase: path.join('./build', example),
+    static: {
+      directory: path.join('./build', example),
+    },
     open: true,
     historyApiFallback: true,
   },
